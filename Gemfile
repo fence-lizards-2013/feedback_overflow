@@ -30,6 +30,7 @@ group :test, :development do
   gem 'faker'
   gem 'database_cleaner'
   gem 'shoulda'
+  gem 'debugger'
 end
 
 

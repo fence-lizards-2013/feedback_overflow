@@ -19,4 +19,26 @@ FactoryGirl.define do
     end
   end
 
+  factory :unassigned_score, :class => Score do
+    actionable -2
+    specific 1
+    kind 0
+  end
+
+  factory :score do
+    user
+    topic
+    actionable -2
+    specific 1
+    kind 0
+  end
+
+  factory :invalid_score, :class => Score do
+    user
+    topic
+    actionable 3
+    specific 8
+    kind -6
+  end
+
 end
