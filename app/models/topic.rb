@@ -3,6 +3,7 @@ class Topic < ActiveRecord::Base
   belongs_to :user
   has_many :comments
   has_many :upvotes
+  has_many :scores
   validates :title, :content, :presence => true
   validates :title, uniqueness: true
   before_create :to_slug

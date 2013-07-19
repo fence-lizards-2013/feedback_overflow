@@ -10,6 +10,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find_by_slug(params[:stub])
     @comment = Comment.new
+    @score = Score.new
   end
 
   def edit

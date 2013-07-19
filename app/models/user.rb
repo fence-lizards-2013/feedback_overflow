@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :topics
   has_many :upvotes, through: :topics
+  has_many :scores
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :username, presence: true,

@@ -11,6 +11,7 @@ FeedbackOverflow::Application.routes.draw do
   delete '/logout' => 'sessions#delete'
 
   resources :comments
+  resources :scores, only: [:new, :create, :show]
 
   post '/upvote/new' => 'upvotes#create', :as => 'upvote'
 
